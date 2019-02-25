@@ -36,43 +36,25 @@ Go to System Preferences for the following:
 - Security and Privacy > General > Allow App Store and identified developers
 - File Sharing > Off
 
-## Terminal
-Install Homebrew
+
+## Install and Configure Homebrew
+
+Install [Homebrew](https://brew.sh/)
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-Install iTerm2
+
+Create [Brewfile](artifacts/Brewfile)
 ```bash
-brew cask install iterm2
+touch Brewfile
 ```
 
-Install Zsh
+Install all the applications listed in the Brewfile with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
 ```bash
-brew install zsh
-```
-The Z-shell resource file, ~/.zshrc, is a script that is run whenever you start Zsh.
-
-Change the default shell to Zsh.
-```bash
-chsh -s /bin/zsh
+brew bundle
 ```
 
-Install Zsh syntax highlighting
-```bash
-brew install zsh-syntax-highlighting
-```
-
-Install Zsh auto suggestions
-```bash
-brew install zsh-autosuggestions
-```
-
-Install Nerd fonts
-```bash
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-```
-
+## Configure the Terminal
 Setup iTerm2 to use the Nerd font
 ```
 iTerm2 > Preferences > Profiles > Text > Font > Change Font
@@ -84,6 +66,13 @@ Select **English > Hack Nerd Font > Regular** for both **Font** and **Non-ASCII 
 Install powerlevel9k theme
 ```bash
 git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
+```
+
+The Z-shell resource file, ~/.zshrc, is a script that is run whenever you start Zsh.
+
+Change the default shell to Zsh.
+```bash
+chsh -s /bin/zsh
 ```
 
 Configure the Z-shell resource file `~/.zshrc`
@@ -110,6 +99,13 @@ source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # make the ls command display colored files names based on the color preset
 alias ls='ls -G'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Homebrew update and cleanup alias script
+alias brewup='brew update; brew upgrade; brew cleanup --prune-prefix; brew doctor'
 ```
 
 Download [iterm2colorschemes](https://iterm2colorschemes.com/)
@@ -118,6 +114,8 @@ Configure iTerm2 Color Preset
 ```
 iTerm2 > Preferences > Profiles > Colors > Color Presets > Dracula
 ```
+
+
 
 ## Reference
   1. [Get your Mac setup to develop, in 2018 by Frankie Valentine](https://medium.com/@frankie.valentine/get-your-mac-setup-to-develop-in-2018-60ce20cd14e7)
