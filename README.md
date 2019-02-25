@@ -1,7 +1,7 @@
 # Setup MacOS Development Environment
 
 ## Purpose
-Document the tools and configuration for my development environment.
+Document the tools and configuration for my maxOS development environment.
 
 ## System Preferences
 
@@ -44,12 +44,14 @@ Install [Homebrew](https://brew.sh/)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Create [Brewfile](artifacts/Brewfile)
+Install applications and dependencies with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
+
+Create `Brewfile`. See [`assets/Brewfile`](assets/Brewfile) for example.
 ```bash
 touch Brewfile
 ```
 
-Install all the applications listed in the Brewfile with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
+Install applications and dependencies with:
 ```bash
 brew bundle
 ```
@@ -68,45 +70,14 @@ Install powerlevel9k theme
 git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
 ```
 
-The Z-shell resource file, ~/.zshrc, is a script that is run whenever you start Zsh.
+The Z-shell resource file, `~/.zshrc`, is a script that is run whenever you start Zsh.
 
 Change the default shell to Zsh.
 ```bash
 chsh -s /bin/zsh
 ```
 
-Configure the Z-shell resource file `~/.zshrc`
-```
-# Load Nerd Fonts with Powerlevel9k theme for Zsh
-POWERLEVEL9K_MODE='nerdfont-complete'
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
-
-# Customize the Powerlevel9k prompts
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-  ssh
-  dir
-  vcs
-  newline
-  status
-)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-# Load Zsh tools for syntax highlighting and autosuggestions
-HOMEBREW_FOLDER="/usr/local/share"
-source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# make the ls command display colored files names based on the color preset
-alias ls='ls -G'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Homebrew update and cleanup alias script
-alias brewup='brew update; brew upgrade; brew cleanup --prune-prefix; brew doctor'
-```
+Configure the Z-shell. See [`assets/.zshrc`](assests/.zshrc) for an example.
 
 Download [iterm2colorschemes](https://iterm2colorschemes.com/)
 
