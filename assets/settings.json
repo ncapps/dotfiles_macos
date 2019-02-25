@@ -1,0 +1,19 @@
+{
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "emmet.triggerExpansionOnTab": true,
+    "editor.formatOnSave": true,
+    "yaml.format.enable": true,
+    "yaml.validate": false,
+    "indenticator.inner.showHighlight": true,
+    "color-highlight.markerType": "underline",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "files.associations": {
+        "*.template": "yaml",
+        "Dockerfile.dev": "yaml"
+    },
+    "explorer.confirmDelete": false
+}

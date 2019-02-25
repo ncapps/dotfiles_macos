@@ -46,7 +46,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 Install applications and dependencies with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
 
-2. Create `Brewfile`. See [`assets/Brewfile`](assets/Brewfile) for example.
+2. Create `Brewfile`. See [`assets/Brewfile`](assets/Brewfile)
 ```bash
 touch Brewfile
 ```
@@ -77,7 +77,7 @@ chsh -s /bin/zsh
 
 The Z-shell (Zsh) resource file, `~/.zshrc`, is a script that is run whenever you start Zsh.
 
-4. Configure Zsh. See [`assets/.zshrc`](assets/.zshrc) for an example.
+4. Configure Zsh. See [`assets/.zshrc`](assets/.zshrc).
 
 5. Download [iterm2colorschemes](https://iterm2colorschemes.com/)
 
@@ -86,6 +86,43 @@ The Z-shell (Zsh) resource file, `~/.zshrc`, is a script that is run whenever yo
 iTerm2 > Preferences > Profiles > Colors > Color Presets > Dracula
 ```
 
+## Configure Visual Studio Code
+1. Go to the Command Palette and select:
+```
+Shell Command: Install `code` in PATH
+```
+
+2. Install Extensions
+- Bracket Pair Colorizer
+- CloudFormation
+- Color Highlight
+- CSS Peek
+- Docker
+- indent-rainbow
+- Indenticator
+- Live Server
+- Material Icon Theme
+- Material Theme
+- Prettier Now
+- Python
+- vscode-cfn-lint
+- vscode-pandoc
+- vscode-spotify
+- YAML
+
+3. SetColor Theme
+```
+Material Theme Palenight High Contrast
+```
+
+4. Set File Icon Theme
+```
+Material Icon Theme
+```
+
+5. Update User Settings. See [`assets/settings.json`](assets/settings.json)
+
 ## Reference and Acknowledgments
   1. [Get your Mac setup to develop, in 2018 by Frankie Valentine](https://medium.com/@frankie.valentine/get-your-mac-setup-to-develop-in-2018-60ce20cd14e7)
   2. [iTerm2, Zsh with Powerlevel9K — Power up your terminal‘s colour scheme and productivity level! by ryanwhocodes](https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c)
+  3. [Up your AWS CloudFormation game with Visual Studio Code by Matthew Hodgkins](https://hodgkins.io/up-your-cloudformation-game-with-vscode)
