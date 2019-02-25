@@ -77,7 +77,7 @@ chsh -s /bin/zsh
 
 The Z-shell (Zsh) resource file, `~/.zshrc`, is a script that is run whenever you start Zsh.
 
-4. Configure Zsh. See [`assets/.zshrc`](assests/.zshrc) for an example.
+4. Configure Zsh. See [`assets/.zshrc`](assets/.zshrc) for an example.
 
 5. Download [iterm2colorschemes](https://iterm2colorschemes.com/)
 
