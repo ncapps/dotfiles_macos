@@ -1,7 +1,7 @@
 # Setup MacOS Development Environment
 
 ## Purpose
-Document the applications and dependencies of my macOS development environment.
+This repository documents the applications and dependencies of my macOS development environment.
 
 ## System Preferences
 
