@@ -122,6 +122,45 @@ Material Icon Theme
 
 5. Update User Settings. See [`assets/settings.json`](assets/settings.json)
 
+## Git and SSH
+1. Configure User Name and Email
+```bash
+git config --global user.name "First Last"
+git config --global user.email "Email"
+```
+2. Configure Git alias and color in `~/.gitconfig`
+```
+[alias]
+    a = add
+    ca = commit -a
+    cam = commit -am
+    s = status
+    pom = push origin master
+    pog = push origin gh-pages
+    puom = pull origin master
+    puog = pull origin gh-pages
+    cob = checkout -b
+[color]
+	  ui = auto
+```
+3. Check for existing SSH keys
+```bash
+ls -al ~/.ssh
+```
+4. Generate a new SSH key
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+5. [Add the SSH key to your GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account)
+- Copy the SSH key to your clipboard
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
+- Log into GitHub
+- Click your profile photo, then click **Settings**
+- Click **SSH and GPG keys**
+- Click **New SSH key** and paste your key
+
 ## Reference and Acknowledgments
   1. [Get your Mac setup to develop, in 2018 by Frankie Valentine](https://medium.com/@frankie.valentine/get-your-mac-setup-to-develop-in-2018-60ce20cd14e7)
   2. [iTerm2, Zsh with Powerlevel9K — Power up your terminal‘s colour scheme and productivity level! by ryanwhocodes](https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c)
