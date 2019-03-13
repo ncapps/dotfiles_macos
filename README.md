@@ -161,6 +161,9 @@ pbcopy < ~/.ssh/id_rsa.pub
 - Click **SSH and GPG keys**
 - Click **New SSH key** and paste your key
 
+## Install VirtualBox
+1. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
 ## Reference and Acknowledgments
   1. [Get your Mac setup to develop, in 2018 by Frankie Valentine](https://medium.com/@frankie.valentine/get-your-mac-setup-to-develop-in-2018-60ce20cd14e7)
   2. [iTerm2, Zsh with Powerlevel9K — Power up your terminal‘s colour scheme and productivity level! by ryanwhocodes](https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c)
