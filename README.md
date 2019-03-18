@@ -44,14 +44,12 @@ defaults write com.apple.finder ShowStatusBar -bool true
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Install applications and dependencies with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
-
-2. Create `Brewfile`. See [`assets/Brewfile`](assets/Brewfile)
+2. Create a **Brewfile** containing a list of applications and dependencies that will be installed. An example **Brewfile** is available here: [`assets/Brewfile`](assets/Brewfile)
 ```bash
 touch Brewfile
 ```
 
-3. Install applications and dependencies with:
+3. Install applications and dependencies with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle):
 ```bash
 brew bundle
 ```
