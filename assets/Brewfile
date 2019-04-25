@@ -29,3 +29,7 @@ cask 'spotify'
 cask 'slack'
 cask 'copyclip'
 cask 'keybase'
+
+cask 'java8'
+brew 'jenkins-lts'
+brew 'maven'
