@@ -92,20 +92,14 @@ Shell Command: Install `code` in PATH
 
 2. Install Extensions
 - Bracket Pair Colorizer
-- CloudFormation
-- Color Highlight
-- CSS Peek
-- Docker
-- indent-rainbow
-- Indenticator
-- Live Server
-- Material Icon Theme
+- ES7 React/Redux/GraphQL/React-Native snippets
+- ESLint
+- Material Icon Themee
 - Material Theme
-- Prettier Now
+- Prettier - Code formatter
 - Python
 - vscode-cfn-lint
 - vscode-pandoc
-- vscode-spotify
 - YAML
 
 3. SetColor Theme

@@ -1,13 +1,11 @@
 {
     "window.zoomLevel": 1,
     "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.showWelcomeMessage": false,
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "emmet.triggerExpansionOnTab": true,
-    "editor.formatOnSave": true,
     "yaml.format.enable": true,
     "yaml.validate": false,
-    "indenticator.inner.showHighlight": true,
-    "color-highlight.markerType": "underline",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontFamily": "Hack Nerd Font",
@@ -15,5 +13,23 @@
         "*.template": "yaml",
         "Dockerfile.dev": "yaml"
     },
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "none",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.insertFinalNewline": true,
+    "editor.detectIndentation": false,
+    "workbench.editor.showTabs": true,
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "prettier.endOfLine": "cr",
+    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDragAndDrop": false
 }

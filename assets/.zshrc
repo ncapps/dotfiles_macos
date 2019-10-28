@@ -19,9 +19,17 @@ source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
 alias ls='ls -G'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Homebrew update and cleanup alias
 alias brewup='brew update; brew upgrade; brew cleanup --prune-prefix; brew doctor'
+
+
+# AWS CLI auto-complete
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+source /usr/local/bin/aws_zsh_completer.sh
+
+# Default to python3
+alias python=/usr/local/bin/python3
