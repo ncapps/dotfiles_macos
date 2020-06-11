@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Install Homebrew if not found
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Fetch the newest version of Homebrew and all formulae
+brew update
+
+# Install dependencies with bundle. See ./Brewfile for dependencies.
+brew tap homebrew/homebrew-bundle
+brew bundle
