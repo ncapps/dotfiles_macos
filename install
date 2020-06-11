@@ -11,3 +11,7 @@ brew update
 # Install dependencies with bundle. See ./Brewfile for dependencies.
 brew tap homebrew/homebrew-bundle
 brew bundle
+
+# Set macOS preferences
+# Run last because this will reload the shell
+source .macos
