@@ -12,3 +12,9 @@ Getting up and running with macOS quickly and easily is quick and easy with this
 6. [Install Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 7. [Install Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#getting-started)
 8. Run `install`
+
+## Acknowledgment
+- [GitHub Dotfiles](https://dotfiles.github.io/)
+- [Dries Vints](https://github.com/driesvints/dotfiles)
+- [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
+- [Anish Athalye](https://github.com/anishathalye/dotbot)
