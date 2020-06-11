@@ -1,5 +1,5 @@
-tap 'homebrew/homebrew-cask'
-tap 'homebrew/homebrew-bundle'
+tap 'homebrew/cask'
+tap 'homebrew/bundle'
 
 
 brew 'awscli'

@@ -9,7 +9,7 @@ fi
 brew update
 
 # Install dependencies with bundle. See ./Brewfile for dependencies.
-brew tap homebrew/homebrew-bundle
+brew tap homebrew/bundle
 brew bundle
 
 # Set macOS preferences
