@@ -8,7 +8,6 @@ brew 'git'
 brew 'jq'
 brew 'openssl'
 brew 'python'
-brew 'zsh'
 
 
 cask 'docker'

@@ -12,7 +12,14 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Install oh-my-zsh
+if test ! -d "$HOME/.oh-my-zsh"; then 
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
 # Set macOS preferences
 # Run last because this will reload the shell
 echo "Enter password to update macOS preferences"
 source .macos
+
+exec zsh
