@@ -1,0 +1,18 @@
+{
+  "workbench.settings.useSplitJSON": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "editor.tabSize": 4,
+  "window.zoomLevel": 1,
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "remote.SSH.defaultExtensions": [
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ms-python.python"
+],
+"workbench.colorTheme": "Default Light+"
+}

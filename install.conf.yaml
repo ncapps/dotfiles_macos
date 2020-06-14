@@ -1,0 +1,12 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc:
+      path: zsh/zshrc
+    ~/Library/Application Support/Code/User/settings.json: 
+      path: vscode/settings.json

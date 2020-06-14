@@ -1,25 +1,73 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -e
+# set -u
+set -o pipefail
 
-# Install Homebrew if not found
-if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
 
-# Fetch the newest version of Homebrew and all formulae
-brew update
+brew_update () {
+  # Install Homebrew
+  if test ! $(which brew); then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
 
-# Install dependencies with bundle. See ./Brewfile for dependencies.
-brew tap homebrew/bundle
-brew bundle
+  # Fetch the newest version of Homebrew and all formulae
+  brew update
 
-# Install oh-my-zsh
-if test ! -d "$HOME/.oh-my-zsh"; then 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
+  # Install dependencies with bundle. See ./Brewfile for dependencies.
+  brew tap homebrew/bundle
+  brew bundle
+
+  # Install oh-my-zsh
+  if test ! -d "$HOME/.oh-my-zsh"; then 
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  fi
+}
+
 
 # Set macOS preferences
 # Run last because this will reload the shell
-echo "Enter password to update macOS preferences"
-source .macos
+mac_update () {
+  source .macos
+}
 
-exec zsh
+
+# Set dotfiles
+dotfiles_update () {
+  source install_dotbot
+}
+
+
+while getopts 'abmd' OPTION; do
+  case "$OPTION" in
+    a)
+      echo "Executing fresh install"
+      brew_update
+      mac_update
+      dotfiles_update
+      exec zsh
+      exit 0
+      ;;
+    b)
+      echo "Updating Homebrew dependencies"
+      brew_update
+      ;;
+    m)
+      echo "Updating macOS system preferences"
+      mac_update
+      ;;
+    d)
+      echo "Updating dotfiles"
+      dotfiles_update
+      exec zsh
+      ;;
+    ?)
+      echo "usage: $(basename $0) [-a] [-b] [-m] [-d]"
+      echo "a   Execute fresh install"
+      echo "b   Update Homebrew dependencies"
+      echo "m   Update macOS settings"
+      echo "d   Update dotfile settings"
+      exit 1
+      ;;
+  esac
+done
+shift "$(($OPTIND -1))"
