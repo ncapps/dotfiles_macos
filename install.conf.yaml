@@ -10,3 +10,6 @@
       path: zsh/zshrc
     ~/Library/Application Support/Code/User/settings.json: 
       path: vscode/settings.json
+
+- shell:
+  - [vscode/install_extensions, Install VS Code extensions]
