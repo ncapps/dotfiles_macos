@@ -13,5 +13,6 @@
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "ms-python.python"
-]
+],
+"workbench.colorTheme": "GitHub Light"
 }
